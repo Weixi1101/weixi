@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>列印表格</title>
+	<style>
+		tr,
+		td {
+			width: 80px;
+			text-align: center;
+
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		var a = 1;
+		var b = 1;
+		document.write("<table border=1>");
+		document.write(
+			"<tr bgcolor=lightblue ><td>a</td><td>b</td><td>NOT a</td><td>NOT b</td><td>a AND b</td><td>a OR b</td><td>a XOR b</td></tr>"
+		);
+
+		document.write("<tr ><td>" + a + "</td><td>" + b + "</td><td>" + Number(!a) + "</td><td>" + Number(!b) + "</td><td>" +
+			(a & b) + "</td><td>" + (a | b) + "</td><td>" + (a ^ b) + "</td></tr>");
+		var a = 1;
+		var b = 0;
+		document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + Number(!a) + "</td><td>" + Number(!b) + "</td><td>" +
+			(a & b) + "</td><td>" + (a | b) + "</td><td>" + (a ^ b) + "</td></tr>");
+
+		var a = 0;
+		var b = 1;
+		document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + Number(!a) + "</td><td>" + Number(!b) + "</td><td>" +
+			(a & b) + "</td><td>" + (a | b) + "</td><td>" + (a ^ b) + "</td></tr>");
+
+		var a = 0;
+		var b = 0;
+		document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + Number(!a) + "</td><td>" + Number(!b) + "</td><td>" +
+			(a & b) + "</td><td>" + (a | b) + "</td><td>" + (a ^ b) + "</td></tr>");
+		document.write("</table>");
+	</script>
+</body>
+
+</html>
